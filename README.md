@@ -1,5 +1,5 @@
 # InsurAI-Corporate-Policy-Automation-and-Intelligence-System
-📌 Project Overview
+📌 Project Overview:
 
 InsurAI is a full-stack enterprise insurance management platform designed to automate corporate policy administration and enhance decision-making through structured intelligence systems.
 
@@ -7,7 +7,7 @@ The platform enables administrators, agents, and customers to manage policies, c
 
 This system focuses on automation, scalability, and structured policy lifecycle management.
 
-🎯 Project Objectives
+🎯 Project Objectives:
 
 Automate corporate policy management workflows
 
@@ -19,7 +19,7 @@ Enable structured consultation and booking systems
 
 Develop a scalable full-stack architecture
 
-🚀 Core Features
+🚀 Core Features:
 🔐 Authentication & Access Control
 
 JWT-based secure login
@@ -69,7 +69,7 @@ Agent performance metrics
 System health overview
 
 🛠 Technology Stack
-Backend
+Backend:
 
 Java 17
 
@@ -83,7 +83,7 @@ MySQL
 
 Maven
 
-Frontend
+Frontend:
 
 React.js
 
@@ -95,7 +95,7 @@ Recharts
 
 Custom CSS Theming
 
-🏗 System Architecture
+🏗 System Architecture:
 
 The application follows a layered architecture model:
 
@@ -170,7 +170,7 @@ Role-based route authorization
 
 Encrypted password handling
 
-RESTful API structure
+RESTful API structure:
 
 📈 Future Enhancements
 
@@ -184,7 +184,7 @@ Cloud deployment (AWS / Azure)
 
 CI/CD integration
 
-🎓 Academic Scope
+🎓 Academic Scope:
 
 This project demonstrates:
 
