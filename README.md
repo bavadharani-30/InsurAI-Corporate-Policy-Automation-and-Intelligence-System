@@ -1,199 +1,70 @@
-# InsurAI-Corporate-Policy-Automation-and-Intelligence-System
-📌 Project Overview:
+# Getting Started with Create React App
 
-InsurAI is a full-stack enterprise insurance management platform designed to automate corporate policy administration and enhance decision-making through structured intelligence systems.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The platform enables administrators, agents, and customers to manage policies, consultations, and claims efficiently through secure role-based dashboards and real-time operational insights.
+## Available Scripts
 
-This system focuses on automation, scalability, and structured policy lifecycle management.
+In the project directory, you can run:
 
-🎯 Project Objectives:
+### `npm start`
 
-Automate corporate policy management workflows
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-Implement secure role-based authentication
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-Provide intelligent operational dashboards
+### `npm test`
 
-Enable structured consultation and booking systems
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Develop a scalable full-stack architecture
+### `npm run build`
 
-🚀 Core Features:
-🔐 Authentication & Access Control
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-JWT-based secure login
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-Role-based access (Admin / Agent / Customer)
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Protected API endpoints
+### `npm run eject`
 
-🏢 Corporate Policy Management
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-Policy creation and management
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Policy lifecycle tracking
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-Coverage details monitoring
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-Status updates and workflow automation
+## Learn More
 
-👨‍💼 Agent Module
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-Consultation scheduling
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-Decision support interface
+### Code Splitting
 
-Performance tracking dashboard
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-Request queue management
+### Analyzing the Bundle Size
 
-👤 Customer Module
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-View available policies
+### Making a Progressive Web App
 
-Book consultations
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-Track active policies
+### Advanced Configuration
 
-Submit requests
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-📊 Administrative Dashboard
+### Deployment
 
-Total users monitoring
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-Policy issuance tracking
+### `npm run build` fails to minify
 
-Agent performance metrics
-
-System health overview
-
-🛠 Technology Stack
-Backend:
-
-Java 17
-
-Spring Boot
-
-Spring Security (JWT)
-
-Spring Data JPA
-
-MySQL
-
-Maven
-
-Frontend:
-
-React.js
-
-Axios
-
-Context API
-
-Recharts
-
-Custom CSS Theming
-
-🏗 System Architecture:
-
-The application follows a layered architecture model:
-
-Controller Layer – Handles client requests
-
-Service Layer – Business logic implementation
-
-Repository Layer – Database operations
-
-Security Layer – Authentication & authorization
-
-DTO Layer – Structured data transfer
-
-This modular architecture ensures maintainability and scalability.
-
-🗄 Database Setup
-
-Create a MySQL database:
-
-CREATE DATABASE insurai_db;
-
-
-Update the database configuration in:
-
-src/main/resources/application.properties
-
-
-Example configuration:
-
-spring.datasource.url=jdbc:mysql://localhost:3306/insurai_db
-spring.datasource.username=root
-spring.datasource.password=your_password
-
-▶️ Running the Application
-🔹 Backend
-
-Open insurai-backend in IntelliJ
-
-Ensure MySQL server is running
-
-Run:
-
-InsuraiBackendApplication.java
-
-
-Backend runs at:
-
-http://localhost:8080
-
-🔹 Frontend
-
-Navigate to:
-
-insurai-frontend
-
-
-Run:
-
-npm install
-npm start
-
-
-Frontend runs at:
-
-http://localhost:3000
-
-🔐 Security Implementation
-
-JWT token-based authentication
-
-Role-based route authorization
-
-Encrypted password handling
-
-RESTful API structure:
-
-📈 Future Enhancements
-
-Predictive policy recommendation engine
-
-Automated claim approval workflows
-
-Email and SMS notification integration
-
-Cloud deployment (AWS / Azure)
-
-CI/CD integration
-
-🎓 Academic Scope:
-
-This project demonstrates:
-
-Full-stack application development
-
-Secure backend API implementation
-
-Frontend dashboard design
-
-Database integration and management
-
-Enterprise-level system structuring
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

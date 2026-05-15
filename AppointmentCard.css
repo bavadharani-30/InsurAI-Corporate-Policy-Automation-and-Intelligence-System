@@ -1,0 +1,235 @@
+/* Appointment Card Styles */
+
+.appointment-card {
+    background: var(--bg-card);
+    border: 1px solid var(--card-border);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    transition: all var(--transition-base) ease-in-out;
+    box-shadow: var(--shadow-md);
+    border-left: 4px solid var(--primary);
+}
+
+.appointment-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+/* Header */
+.appointment-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-md);
+}
+
+.appointment-card__header-left {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-md);
+    flex: 1;
+}
+
+.appointment-card__icon {
+    font-size: var(--icon-size-xl);
+    width: var(--icon-size-xl);
+    height: var(--icon-size-xl);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.appointment-card__title {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--text-main);
+    line-height: var(--line-height-tight);
+}
+
+.appointment-card__subtitle {
+    margin: var(--space-xs) 0 0 0;
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+    line-height: var(--line-height-normal);
+}
+
+.appointment-card__status {
+    padding: var(--space-xs) var(--space-md);
+    border-radius: 20px;
+    font-size: var(--font-size-xs);
+    font-weight: var(--font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    color: white;
+}
+
+/* Details */
+.appointment-card__details {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.appointment-card__detail-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-md);
+    font-size: var(--font-size-sm);
+}
+
+.appointment-card__detail-label {
+    color: var(--text-muted);
+    font-weight: var(--font-weight-medium);
+    flex-shrink: 0;
+}
+
+.appointment-card__detail-value {
+    color: var(--text-main);
+    text-align: right;
+    flex: 1;
+}
+
+.appointment-card__rejection {
+    padding: var(--space-md);
+    background: var(--status-rejected-bg);
+    border: 1px solid var(--status-rejected);
+    border-radius: 8px;
+    font-size: var(--font-size-sm);
+    color: var(--status-rejected);
+}
+
+/* Actions */
+.appointment-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.appointment-card__action {
+    width: 100%;
+    height: var(--button-height-md);
+    padding: 0 var(--space-lg);
+    border-radius: 8px;
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: all var(--transition-base) ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    border: none;
+    outline: none;
+}
+
+.appointment-card__action--primary {
+    background: var(--primary);
+    color: white;
+}
+
+.appointment-card__action--primary:hover {
+    background: var(--primary-dark, var(--primary));
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+.appointment-card__action--secondary {
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--card-border);
+}
+
+.appointment-card__action--secondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: var(--primary);
+}
+
+.appointment-card__action--success {
+    background: var(--status-approved);
+    color: white;
+}
+
+.appointment-card__action--success:hover {
+    background: #0d9668;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Calendar Dropdown */
+.calendar-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin-top: var(--space-xs);
+    background: var(--bg-card);
+    border: 1px solid var(--card-border);
+    border-radius: 8px;
+    box-shadow: var(--shadow-xl);
+    z-index: 1000;
+    overflow: hidden;
+    animation: slideInUp 0.2s ease-out;
+}
+
+.calendar-dropdown button {
+    width: 100%;
+    padding: var(--space-md);
+    background: transparent;
+    border: none;
+    color: var(--text-main);
+    text-align: left;
+    cursor: pointer;
+    transition: background var(--transition-fast);
+    font-size: var(--font-size-sm);
+}
+
+.calendar-dropdown button:hover {
+    background: rgba(102, 126, 234, 0.1);
+}
+
+.calendar-dropdown button:not(:last-child) {
+    border-bottom: 1px solid var(--card-border);
+}
+
+/* Footer */
+.appointment-card__footer {
+    padding-top: var(--space-md);
+    border-top: 1px solid var(--card-border);
+    font-size: var(--font-size-sm);
+    color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .appointment-card {
+        padding: var(--space-lg);
+    }
+
+    .appointment-card__header {
+        flex-direction: column;
+    }
+
+    .appointment-card__status {
+        align-self: flex-start;
+    }
+}
+
+/* Animations */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
