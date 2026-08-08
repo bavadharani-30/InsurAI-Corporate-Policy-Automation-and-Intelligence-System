@@ -1,70 +1,193 @@
-# Getting Started with Create React App
+# 🏥 InsurAI - Modern Insurance Management Platform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to **InsurAI**—a re-engineered, full-stack insurance management system designed for scalability, governance, and seamless user experience.
 
-## Available Scripts
+This platform connects **Users**, **Agents**, **Administrators**, and **Insurance Companies** in a unified ecosystem, featuring a robust Spring Boot backend and a dynamic React frontend.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+* **🏢 Company Management**: Insurance companies can register, manage their own policies, and view analytics.
+* **👑 Super Admin Governance**: Approval workflows for new companies, system-wide oversight, and emergency controls.
+* **📄 Policy & Claims**: Users can browse policies, purchase plans, and submit claims with document uploads.
+* **👥 Role-Based Portals**: Distinct dashboards for Super Admins, Companies, Admins, Agents, and Users.
+* **🔔 Real-time Notifications**: WebSocket integration for instant alerts and updates.
+* **🎨 Unified Design System**: Consistent UI/UX with a custom design token system and premium aesthetics.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Backend
 
-### `npm run build`
+* **Language**: Java 17
+* **Framework**: Spring Boot 3.x (Spring Security, Spring Data JPA)
+* **Database**: MySQL 8.0
+* **Security**: JWT Authentication & Role-Based Access Control (RBAC)
+* **Build Tool**: Maven
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Framework**: React.js (v18+)
+* **Styling**: CSS Modules, Custom Design Tokens (`design-tokens.css`)
+* **State Management**: React Context / Hooks
+* **API Client**: Axios
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📋 Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Before you begin, ensure you have the following installed:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **Java Development Kit (JDK) 17** or higher.
+2. **Node.js** (v16+) and **npm**.
+3. **MySQL Server** (running on port 3306).
+4. **Git**.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## ⚙️ Quick Start Guide
 
-## Learn More
+Follow these steps to get the project up and running locally.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### 1. Database Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. **Create the Database**:
+    Open your MySQL client (e.g., MySQL Workbench, DBeaver) and run:
 
-### Code Splitting
+    ```sql
+    CREATE DATABASE insurai_db;
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. **Run Application**:
+    Spring Boot is configured to automatically generate the database schema when it runs (`spring.jpa.hibernate.ddl-auto=update`). You don't need to run any manual migration scripts.
 
-### Analyzing the Bundle Size
+### 2. Backend Setup (`insurai-backend`)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+1. Navigate to the backend directory:
 
-### Making a Progressive Web App
+    ```bash
+    cd insurai-backend
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+2. **Configure Environment Variables**:
+    Create a `.env` file in the `insurai-backend` directory (copy from `.env.example` if available) and add your credentials:
 
-### Advanced Configuration
+    ```properties
+    DB_URL=jdbc:mysql://localhost:3306/insurai_db
+    DB_USER=root
+    DB_PASS=your_mysql_password
+    JWT_SECRET=your_secure_jwt_secret_key_ensure_this_is_long_enough
+    GROQ_API_KEY=your_groq_api_key_optional
+    ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+3. **Run the Application**:
+    * **Windows (PowerShell)**:
 
-### Deployment
+        ```powershell
+        ./run_local.ps1
+        ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+    * **Manual (Maven)**:
 
-### `npm run build` fails to minify
+        ```bash
+        ./mvnw spring-boot:run
+        ```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+    The backend server will start on `http://localhost:8080`.
+
+### 3. Frontend Setup (`insurai-frontend`)
+
+1. Navigate to the frontend directory:
+
+    ```bash
+    cd ../insurai-frontend
+    ```
+
+2. **Install Dependencies**:
+
+    ```bash
+    npm install
+    ```
+
+3. **Start the Development Server**:
+
+    ```bash
+    npm start
+    ```
+
+    The frontend will launch at `http://localhost:3000`.
+
+---
+
+## 🔐 Automated Data Seeding & Default Credentials
+
+When you start the backend on a clean database (no users), the application's `DataSeeder` automatically generates a comprehensive mock dataset for testing and exploring the application:
+
+* **Super Admin** (1 user) -> `superadmin@insurai.com` / `sUpEr@123`
+* **Company Admins** (11 Users, one for each major company like LIC, HDFC, etc.) -> e.g., `ca.lic@insurai.com` / `cOmPaNy@123`
+* **Agents** (100 Users) -> `agent1@insurai.com` through `agent100@insurai.com` / `aGeNt@123`
+* **End Users** (250 Users) -> `user1@insurai.com` through `user250@insurai.com` / `uSeR@123`
+
+The seeder also automatically generates interlinked **Policies, Bookings, Claims, Agent Reviews, Documents, Audit Logs,** and **Feedback** to allow unrestricted exploration of the entire application.
+
+### Roles Hierarchy
+
+* **SUPER_ADMIN**: Full system control, approves companies.
+* **COMPANY_ADMIN**: Manages their own insurance policies.
+* **AGENT**: Handles consultations and policy recommendations.
+* **USER**: End-customer who buys policies and claims insurance.
+
+---
+
+## 🧪 Testing the Application
+
+### 1. Company Registration Flow
+
+1. **Register** a new account with the role "Company" (via API or provided UI if available).
+2. **Login as Super Admin** and navigate to the Dashboard.
+3. **Approve** the pending company registration.
+4. **Login as the Company** to access the Policy Management dashboard.
+
+### 2. Policy Creation & Purchase
+
+1. **As a Company**, create a new Insurance Policy.
+2. **Login as a User**, browse policies, and purchase the newly created policy.
+
+### 3. Claims Process
+
+1. **As a User**, go to "My Policies" and file a claim.
+2. **Upload Documents** as proof (PDF/Images).
+3. **As an Agent/Admin**, review and process the claim.
+
+---
+
+## 📂 Project Structure
+
+```plaintext
+insurai/
+├── insurai-backend/      # Spring Boot Application
+│   ├── src/main/java/    # Source Code (Controllers, Services, Models)
+│   ├── src/main/resources/ # Config (application.properties, templates)
+│   └── public/           # Static assets
+├── insurai-frontend/     # React Application
+│   ├── src/components/   # Reusable UI Components (StandardCard, etc.)
+│   ├── src/pages/        # Dashboard Pages (User, Agent, Admin, Company)
+│   ├── src/styles/       # CSS Design Tokens & Global Styles
+│   └── public/           # Static assets, index.html
+└── README.md             # Project Documentation
+```
+
+---
+
+## 🐛 Troubleshooting
+
+* **Backend Fails to Start**: Check that MySQL is running and the credentials in `.env` (or `application.properties`) are correct.
+* **Frontend API Errors**: Ensure the backend is running on port `8080`. Check the browser console/network tab for CORS issues or 500 errors.
+* **Login Fails**: Verify the user exists in the database and `is_active` is set to `true`.
+
+---
+
+**Version**: 2.0 (Re-engineered)
+**Maintained by**: InsurAI Dev Team
